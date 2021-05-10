@@ -1,0 +1,24 @@
+&control
+    calculation = 'scf'
+    prefix = 'si'
+    outdir = './outdir'
+    pseudo_dir = '/home/maestro/Downloads/SSSP_efficiency_pseudos' 
+    etot_conv_thr = 1e-5
+    forc_conv_thr = 1e-4
+/
+&system
+    ibrav=2, celldm(1)=10.20,
+    nat=2, ntyp=1,
+    ecutwfc=20.0
+/
+&electrons
+/
+ATOMIC_SPECIES
+  Si  28.0855  Si.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (alat)
+  Si 0.00 0.00 0.00 
+  Si 0.25 0.25 0.25 
+K_POINTS (automatic)
+  6 6 6 0 0 0
+  
